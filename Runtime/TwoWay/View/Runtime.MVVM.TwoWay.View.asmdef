@@ -1,7 +1,10 @@
 {
-    "name": "Editor",
+    "name": "Runtime.MVVM.TwoWay.View",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:e987dc5058507b9469fad6f753af2410"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
