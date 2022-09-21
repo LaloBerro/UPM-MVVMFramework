@@ -1,0 +1,16 @@
+{
+    "name": "Runtime.MVVM.PropertyBinding.View",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f2dda65dfb8468844bca0d401ec2a3b6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
