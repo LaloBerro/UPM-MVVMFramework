@@ -8,7 +8,7 @@ namespace MVVM.EventBinding.View
     {
         [Header("References")]
         [SerializeField] protected Button _button;
-        [SerializeField] private EventBindingViewModelSO _twoWayViewModel;
+        [SerializeField] private EventBindingViewModelSO _eventBindingViewModelSO;
 
         private void Awake()
         {
@@ -19,7 +19,7 @@ namespace MVVM.EventBinding.View
 
         protected void ExecuteCommand()
         {
-            _twoWayViewModel.GetViewModel().ReactiveCommand.Execute();
+            _eventBindingViewModelSO.GetViewModel().ReactiveCommand.Execute();
         }
 
         protected abstract void Dispose();

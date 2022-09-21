@@ -12,7 +12,7 @@ namespace MVVM.PropertyBinding.InteraceAdapters
 
         public ReactiveVariableSO[] ReactiveVariableSOs => _reactiveVariableSOs;
 
-        public PropertyBindingViewModel GetOneWayViewModel()
+        public PropertyBindingViewModel GetViewModel()
         {
             if (!ReferenceEquals(_propertyBindingViewModel, null))
                 return _propertyBindingViewModel;

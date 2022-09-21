@@ -1,0 +1,18 @@
+{
+    "name": "Runtime.MVVM.Presenters.InterfaceAdapters",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f2dda65dfb8468844bca0d401ec2a3b6",
+        "GUID:d567d02b6f7dfcc47a3341f2bbfe34ef",
+        "GUID:af77b26c95c044d4c8d61fbef4caa5bd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
