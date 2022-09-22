@@ -1,20 +1,25 @@
 {
   "name": "com.tgl.mvvmframework",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "displayName": "TGL - MVVM Framework",
-  "description": "",
   "unity": "2020.3",
   "unityRelease": "0b5",
   "documentationUrl": "",
   "changelogUrl": "",
   "licensesUrl": "",
-  "keywords": [
-  ],
+  "keywords": [],
   "author": {
     "name": "TGL",
     "email": "",
     "url": ""
   },
   "type": "tool",
-  "hideInEditor": false
+  "hideInEditor": false,
+  "samples": [
+    {
+      "displayName": "Smaples",
+      "description": "This contains files for samples",
+      "path": "Samples~/Samples"
+    }
+  ]
 }
