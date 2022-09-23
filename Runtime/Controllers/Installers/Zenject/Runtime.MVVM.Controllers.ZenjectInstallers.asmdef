@@ -1,0 +1,19 @@
+{
+    "name": "Runtime.MVVM.Controllers.ZenjectInstallers",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e987dc5058507b9469fad6f753af2410",
+        "GUID:d567d02b6f7dfcc47a3341f2bbfe34ef",
+        "GUID:936fc9e3e9b06344dbf5a87fa14d19c8",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
