@@ -9,17 +9,20 @@ namespace MVVM.Controllers
         [Header("References")]
         [SerializeField] private EventBindingViewModelSO _eventBindingViewModelSO;
 
+        private UseCaseType _useCase;
+
         [Inject]
         public void InjectUseCase(UseCaseType useCase)
         {
-            InitializeController(useCase, _eventBindingViewModelSO.GetViewModel());
+            _useCase = useCase;
+
         }
 
         protected abstract void InitializeController(UseCaseType useCase, EventBindingViewModel eventBindingViewModel);
 
         public override void InstallBindings()
         {
-
+            InitializeController(_useCase, _eventBindingViewModelSO.GetViewModel());
         }
     }
 }
