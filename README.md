@@ -1,7 +1,7 @@
 ---
 description: >-
   MVVM Framwork es un package que nos va a proporcionar las base para
-  implementar MVVM en Uni.
+  implementar MVVM en Unity.
 ---
 
 # Introduccion

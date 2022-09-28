@@ -10,7 +10,7 @@ description: En esta guia se vera como importar MVVM Framework a Unity
 2. Luego, abrir PackageManager.
 3. Click en buton de `+`.
 4. Click en Add package from git URL.
-   * ![](<.gitbook/assets/image (1).png>)
+   * ![](.gitbook/assets/image.png)
 5. Copiar el link: [https://github.com/LaloBerro/UnityPackage-MVVMFramework.git](https://github.com/LaloBerro/UnityPackage-MVVMFramework.git) y darle a Add.
-   * ![](<.gitbook/assets/image (2).png>)
+   * ![](<.gitbook/assets/image (1).png>)
 6. Listo!
