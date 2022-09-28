@@ -22,5 +22,5 @@ Para crear uno vamos a la Project View y Create:&#x20;
 
 Las ReactiveProperty son ScriptableObjects, estas son variables que reaccionan cuando el viewmodel los ejecuta y los DataBinding se subscriben.
 
-<figure><img src="../.gitbook/assets/Untitled (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled (2) (2).png" alt=""><figcaption></figcaption></figure>
 
