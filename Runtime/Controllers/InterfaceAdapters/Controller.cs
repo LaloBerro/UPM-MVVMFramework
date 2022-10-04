@@ -5,13 +5,13 @@ namespace MVVM.Controllers
 {
     public abstract class Controller : IController
     {
-        private readonly EventBindingViewModel _twoWayViewModel;
+        private readonly EventBindingViewModel _eventBindingViewModel;
 
-        public Controller(EventBindingViewModel twoWayViewModel)
+        public Controller(EventBindingViewModel eventBindingViewModel)
         {
-            _twoWayViewModel = twoWayViewModel;
+            _eventBindingViewModel = eventBindingViewModel;
 
-            _twoWayViewModel.ReactiveCommand.Subscribe(OnCommandExecuted);
+            _eventBindingViewModel.ReactiveCommand.Subscribe(OnCommandExecuted);
         }
 
         private void OnCommandExecuted(Unit _)
