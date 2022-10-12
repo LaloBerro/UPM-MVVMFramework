@@ -5,11 +5,11 @@ namespace MVVM.Controllers
 {
     public class CommandControllerZinstaller : ControllerZenjectInstaller<ICommand>
     {
-        protected override void InitializeController(ICommand command, EventBindingViewModel eventBindingViewModel)
+        protected override IController GetInitializedController(ICommand command, EventBindingViewModel eventBindingViewModel)
         {
             IController controller = new CommandController(eventBindingViewModel, command);
 
-            Container.Bind<IController>().FromInstance(controller).AsSingle();
+            return controller;
         }
     }
 }

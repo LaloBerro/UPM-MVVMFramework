@@ -9,20 +9,27 @@ namespace MVVM.Controllers
         [Header("References")]
         [SerializeField] private EventBindingViewModelSO _eventBindingViewModelSO;
 
+        private IController _controller;
         private UseCaseType _useCase;
 
         [Inject]
         public void InjectUseCase(UseCaseType useCase)
         {
             _useCase = useCase;
-
         }
-
-        protected abstract void InitializeController(UseCaseType useCase, EventBindingViewModel eventBindingViewModel);
 
         public override void InstallBindings()
         {
-            InitializeController(_useCase, _eventBindingViewModelSO.GetViewModel());
+            _controller = GetInitializedController(_useCase, _eventBindingViewModelSO.GetViewModel());
+
+            Container.Bind<IController>().FromInstance(_controller).AsSingle();
+        }
+
+        protected abstract IController GetInitializedController(UseCaseType useCase, EventBindingViewModel eventBindingViewModel);
+
+        private void OnDestroy()
+        {
+            _controller.Dispose();
         }
     }
 }
