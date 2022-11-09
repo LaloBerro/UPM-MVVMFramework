@@ -7,6 +7,6 @@ namespace MVVM.PropertyBinding.InteraceAdapters
         Type VariableType { get; }
         object Value { get; }
         void SetValue(object value);
-        void Subscribe(Action action);
+        IDisposable Subscribe(Action action);
     }
 }

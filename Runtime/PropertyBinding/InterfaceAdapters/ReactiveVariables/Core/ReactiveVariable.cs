@@ -21,13 +21,15 @@ namespace MVVM.PropertyBinding.InteraceAdapters
             _reactiveProperty.Value = (DataType)value;
         }
 
-        public void Subscribe(Action action)
+        public IDisposable Subscribe(Action action)
         {
-            _reactiveProperty.Subscribe(value =>
-            {
-                _value = value;
-                action?.Invoke();
-            });
+            IDisposable disposable = _reactiveProperty.Subscribe(value =>
+                                                                        {
+                                                                            _value = value;
+                                                                            action?.Invoke();
+                                                                        });
+
+            return disposable;
         }
     }
 }
