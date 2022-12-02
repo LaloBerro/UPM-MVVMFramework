@@ -8,6 +8,9 @@ namespace MVVM.PropertyBinding.InteraceAdapters
         [Header("References")]
         [SerializeField] private DataType _defaultValue;
 
+        [Header("Test (only works in play mode)")]
+        [SerializeField] private DataType _testValue;
+
         private IReactiveVariable _reactiveVariable = null;
 
         public override Type VariableType => typeof(DataType);
@@ -18,6 +21,14 @@ namespace MVVM.PropertyBinding.InteraceAdapters
                 _reactiveVariable = new ReactiveVariable<DataType>(_defaultValue);
 
             return _reactiveVariable;
+        }
+
+        private void OnValidate()
+        {
+            if (!Application.isPlaying)
+                return;
+
+            GetReactiveVariable().SetValue(_testValue);
         }
     }
 }
