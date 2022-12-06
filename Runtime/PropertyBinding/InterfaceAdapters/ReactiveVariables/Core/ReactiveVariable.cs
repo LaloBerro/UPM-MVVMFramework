@@ -5,7 +5,7 @@ namespace MVVM.PropertyBinding.InteraceAdapters
 {
     public class ReactiveVariable<DataType> : IReactiveVariable
     {
-        private readonly ReactiveProperty<DataType> _reactiveProperty;
+        private readonly Subject<DataType> _subject;
         private DataType _value;
 
         public Type VariableType => typeof(DataType);
@@ -13,17 +13,17 @@ namespace MVVM.PropertyBinding.InteraceAdapters
 
         public ReactiveVariable(DataType defaultValue = default)
         {
-            _reactiveProperty = new ReactiveProperty<DataType>(defaultValue);
+            _subject = new Subject<DataType>();
         }
 
         public void SetValue(object value)
         {
-            _reactiveProperty.Value = (DataType)value;
+            _subject.OnNext((DataType)value);
         }
 
         public IDisposable Subscribe(Action action)
         {
-            IDisposable disposable = _reactiveProperty.Subscribe(value =>
+            IDisposable disposable = _subject.Subscribe(value =>
                                                                         {
                                                                             _value = value;
                                                                             action?.Invoke();
