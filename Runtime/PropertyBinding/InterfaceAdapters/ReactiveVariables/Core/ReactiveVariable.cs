@@ -18,7 +18,8 @@ namespace MVVM.PropertyBinding.InteraceAdapters
 
         public void SetValue(object value)
         {
-            _subject.OnNext((DataType)value);
+            _value = (DataType)value;
+            _subject.OnNext(_value);
         }
 
         public IDisposable Subscribe(Action action)
