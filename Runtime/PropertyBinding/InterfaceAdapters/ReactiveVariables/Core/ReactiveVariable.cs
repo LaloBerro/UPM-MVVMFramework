@@ -14,6 +14,7 @@ namespace MVVM.PropertyBinding.InteraceAdapters
         public ReactiveVariable(DataType defaultValue = default)
         {
             _subject = new Subject<DataType>();
+            SetValue(defaultValue);
         }
 
         public void SetValue(object value)
