@@ -16,9 +16,10 @@ namespace MVVM.PropertyBinding.InteraceAdapters
 
         public IReactiveVariable GetReactiveVariableByType(Type type)
         {
-            IReactiveVariable reactiveVariable = _reactiveVariables.Select((reactiveVariable, index) => new { Index = index, ReactiveVariable = reactiveVariable })
-                                                            .Where(element => element.ReactiveVariable.VariableType == type)
-                                                            .FirstOrDefault().ReactiveVariable;
+            IReactiveVariable reactiveVariable = _reactiveVariables
+                .Select((reactiveVariable, index) => new { Index = index, ReactiveVariable = reactiveVariable })
+                .FirstOrDefault(element => element.ReactiveVariable.VariableType == type)
+                ?.ReactiveVariable;
 
             return reactiveVariable;
         }

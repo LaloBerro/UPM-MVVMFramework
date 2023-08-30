@@ -17,10 +17,10 @@ namespace MVVM.PropertyBinding.InteraceAdapters
             if (!ReferenceEquals(_propertyBindingViewModel, null))
                 return _propertyBindingViewModel;
 
-            int totalreactiveVariables = _reactiveVariableSOs.Length;
-            IReactiveVariable[] reactiveVariables = new IReactiveVariable[totalreactiveVariables];
+            int totalReactiveVariables = _reactiveVariableSOs.Length;
+            IReactiveVariable[] reactiveVariables = new IReactiveVariable[totalReactiveVariables];
 
-            for (int i = 0; i < totalreactiveVariables; i++)
+            for (int i = 0; i < totalReactiveVariables; i++)
             {
                 reactiveVariables[i] = _reactiveVariableSOs[i].GetReactiveVariable();
             }
