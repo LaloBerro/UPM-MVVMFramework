@@ -36,7 +36,7 @@ namespace MVVM.PropertyBinding.View
 
         private void DrawReactivePropertyDropdown(PropertyBindingViewModelSO viewModel)
         {
-            _selectedReactiveFieldIndex = _dataBinding.ReactibeVariableIndex;
+            _selectedReactiveFieldIndex = _dataBinding.ReactiveVariableIndex;
 
             var reactives = viewModel.ReactiveVariableSOs;
 
@@ -65,7 +65,7 @@ namespace MVVM.PropertyBinding.View
             int selectedReactiveFieldIndex = EditorGUILayout.Popup("Reactive to", _selectedReactiveFieldIndex, options);
             _selectedReactiveFieldIndex = selectedReactiveFieldIndex;
 
-            _dataBinding.ReactibeVariableIndex = _selectedReactiveFieldIndex;
+            _dataBinding.ReactiveVariableIndex = _selectedReactiveFieldIndex;
             _selectedReactiveGenericTypeName = reactives[_selectedReactiveFieldIndex].VariableType.Name;
             _selectedReactiveGenericTypeName = reactives[_selectedReactiveFieldIndex].VariableType.Name;
         }

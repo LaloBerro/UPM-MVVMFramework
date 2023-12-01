@@ -31,6 +31,11 @@ namespace MVVM.PropertyBinding.InteraceAdapters
             return _reactiveVariable;
         }
 
+        public override void ResetVariable()
+        {
+            _reactiveVariable = new ReactiveVariable<DataType>(_defaultValue);
+        }
+
 #if UNITY_EDITOR
         private void SetValue()
         {
@@ -49,6 +54,6 @@ namespace MVVM.PropertyBinding.InteraceAdapters
             
             GetReactiveVariable().SetValue(_testValue);
         }
-    }
 #endif
+    }
 }

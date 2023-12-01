@@ -7,5 +7,6 @@ namespace MVVM.PropertyBinding.InteraceAdapters
     {
         public abstract Type VariableType { get; }
         public abstract IReactiveVariable GetReactiveVariable();
+        public abstract void ResetVariable();
     }
 }
