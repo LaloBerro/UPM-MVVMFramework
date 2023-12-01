@@ -33,7 +33,7 @@ namespace MVVM.PropertyBinding.InteraceAdapters
 
         public override void ResetVariable()
         {
-            _reactiveVariable = new ReactiveVariable<DataType>(_defaultValue);
+            _reactiveVariable.SetValue(_defaultValue);
         }
 
 #if UNITY_EDITOR
